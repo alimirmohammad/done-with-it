@@ -12,7 +12,9 @@ import useNotifications from "../hooks/useNotifications";
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
-  useNotifications((notification) => navigation.navigate("Account"));
+  useNotifications((notification) =>
+    navigation.navigate(routes.ACCOUNT_TAB, { screen: routes.ACCOUNT })
+  );
 
   return (
     <Tab.Navigator>
